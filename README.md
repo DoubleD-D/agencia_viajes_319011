@@ -1,6 +1,3 @@
-Claro, aquí tienes el texto convertido a formato **Markdown**, manteniendo la estructura y estilo:
-
----
 
 # ✈️ Travel Agency - High Availability System
 
