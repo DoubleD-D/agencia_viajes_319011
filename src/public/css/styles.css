@@ -1,0 +1,298 @@
+/* Importamos la fuente Roboto para texto del cuerpo y una fuente Serif elegante para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header {
+    background-image: url(img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.35); 
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0; /* Se ajusta el padding */
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo semitransparente sutil */
+    backdrop-filter: blur(3px); /* Efecto cristal para el menú */
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 28px; 
+    font-weight: 700;
+    font-family: 'Playfair Display', serif; 
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 16px;
+    padding: 20px 15px; 
+    color: #FFFFFF;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover {
+    color: #099FA6; 
+}
+
+.icons {
+    display: flex;
+}
+
+.icons i {
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #099FA6;
+}
+
+
+.header-txt {
+    width: 50%; 
+    margin-left: 0; 
+}
+
+.header-txt h1 {
+    font-size: 80px; 
+    line-height: 1;
+    font-weight: 900;
+    text-transform: none; 
+    color: #FFFFFF; 
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.header-txt p {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 400;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Botón */
+.btn-1 {
+    display: inline-block;
+    padding: 12px 25px; 
+    border-radius: 5px; 
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #099FA6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: #266371;
+}
+
+
+.carrusel-actividades {
+    padding: 80px 0;
+    background-color: #f8f8f8; 
+    position: relative;
+    box-shadow: inset 0 100px 50px -50px #fff, inset 0 -100px 50px -50px #fff; 
+}
+
+.actividades-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.explore-text {
+    font-size: 14px;
+    color: #555555;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.actividades-title {
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #333333;
+}
+
+/* Contenedor Swiper*/
+.swiper.mySwiper {
+    width: 90%; /* Ancho que permite ver las tarjetas de los lados */
+    height: 450px; /* Altura para las tarjetas */
+    margin: 0 auto;
+}
+
+/* Estilos de cada tarjeta/slide */
+.carrusel-item {
+    width: 320px !important; 
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+/* Estilo para hacer que la tarjeta activa se vea más grande (efecto 3D/Zoom) */
+.swiper-slide-active {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Overlay para el texto dentro de la tarjeta */
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.item-categoria {
+    display: block;
+    color: #AFAFAF;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.item-titulo {
+    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* Flechas de Navegación */
+.rows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 10;
+}
+
+/* Estilos para las flechas personalizadas (custom-prev/next) */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: 2px solid #099FA6;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    background-color: #099FA6;
+}
+
+.custom-prev {
+    left: 50px;
+}
+
+.custom-next {
+    right: 50px;
+}
+
+.custom-prev::after, .custom-next::after {
+    font-size: 18px !important;
+    font-weight: bold;
+    color: #099FA6; /* Color de las flechas */
+}
+
+.custom-prev:hover::after, .custom-next:hover::after {
+    color: #FFFFFF;
+}
+
+
+@media(max-width:991px){
+    .menu{
+        padding: 30px;
+    }
+    
+    .header{
+        align-items: center;
+    }
+    
+    .header-txt{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .header-txt h1{
+        font-size: 50px; /* Reducimos el tamaño en móvil */
+        margin-bottom: 10px;
+    }
+
+     CARRUSEL EN MÓVIL 
+    .carrusel-item {
+        width: 90% !important; 
+    }
+    
+    .custom-prev, .custom-next {
+        width: 35px;
+        height: 35px;
+        left: 10px;
+    }
+    .custom-next {
+        right: 10px;
+    }
+
+    .custom-prev::after, .custom-next::after {
+        font-size: 14px !important;
+    }
+    
+    
+}
