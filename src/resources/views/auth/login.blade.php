@@ -8,7 +8,8 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="/">Inicio</a></li>
-                    <li><a href="#">Reservaciones</a></li>
+                    <li><a href="{{ route ('reservaciones') }}">Reservaciones</a></li>
+                    <li><a href="{{ route('service') }}">Servicios</a></li>
                     <li><a href="{{ route('login') }}" style="color: #099FA6;">Login</a></li>
                     <li><a href="{{ route('register') }}">Registro</a></li>
                 </ul>
